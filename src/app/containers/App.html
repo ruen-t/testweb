@@ -1,1 +1,27 @@
-<section>{{vm.message}}</section>
+<section>
+    <md-content class="md-padding container" layout-xs="column" layout="row">
+        <div class="ui three column doubling stackable grid">
+            <div flex-xs flex-gt-xs="30" class="column" layout="column" ng-repeat="article in displayNews">
+                <md-card>
+                    <img ng-src="{{article.urlToImage}}" class="md-card-image" alt="Washed Out">
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{article.title}}</span>
+                        </md-card-title-text>
+                    </md-card-title>
+                    <md-card-content>
+                        <p>
+                            {{article.description}}
+                        </p>
+
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                            <md-button ng-click="openLink(article.url)">Read more</md-button>
+                           
+                          </md-card-actions>
+                </md-card>
+            </div>
+        </div>
+    </md-content>
+    <button class="fluid ui button" ng-click="loadMore()">Load more</button>
+</section>

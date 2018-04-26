@@ -12,10 +12,5 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       url: '/',
       component: 'app'
     });
-     $stateProvider
-    .state('test', {
-      url: '/test',
-      component: 'test'
-    });
 
 }

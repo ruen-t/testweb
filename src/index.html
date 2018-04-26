@@ -3,7 +3,7 @@
   <head>
     <base href="/">
     <meta charset="utf-8">
-    <title>FountainJS</title>
+    <title>Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
@@ -23,7 +23,28 @@
 
 
   <body ng-app="app">
-    <div class="todoapp">
+   
+     <div ng-controller="menuController as vm" class="ui  column stackable grid">
+       <div class="two wide column ">
+        <img  src="assets/logo.png" width="120px" height="120px" style="margin-left: 20px; "/>
+        </div>
+        <div class="thirteen wide column  ui right inverted floated menu" style="margin-top: 50px; margin-bottom: 50px;">
+            <div class=" menu">
+                <a class="item" style="padding-right: 100px;padding-left: 100px">News</a>
+                <a class="item" style="padding-right: 100px;padding-left: 100px">Regions</a>
+                <a class="item" style="padding-right: 100px;padding-left: 100px">Video</a>
+                <a class="item" style="padding-right: 100px;padding-left: 100px">TV</a>
+                <div class="item" style="padding-left: 50px">
+                    <div class="ui transparent inverted icon input">
+                        <i class="search icon"></i>
+                        <input type="text" placeholder="Search" ng-model="search">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     
+    <div>
       <ui-view></ui-view>
     </div>
   </body>
